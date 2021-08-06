@@ -3,7 +3,7 @@
 Usage:
     $ python path/to/val.py --data coco128.yaml --weights yolov5s.pt --img 640
 """
-
+print("start")
 import argparse
 import json
 import os
@@ -26,7 +26,7 @@ from utils.metrics import ap_per_class, ConfusionMatrix
 from utils.plots import plot_images, output_to_target, plot_study_txt
 from utils.torch_utils import select_device, time_sync
 from utils.callbacks import Callbacks
-
+print("end")
 
 def save_one_txt(predn, save_conf, shape, file):
     # Save one txt result
@@ -348,5 +348,8 @@ def main(opt):
 
 
 if __name__ == "__main__":
+    print("opt")
     opt = parse_opt()
+    print("main start")
     main(opt)
+    print("main end")
